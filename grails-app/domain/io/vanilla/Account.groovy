@@ -53,7 +53,7 @@ class Account {
 		this.hasAdminRole = false
 		this.save(flush:true)
 
-		def role = Role.findByAuthority(ApplicationConstants.ROLE_CUSTOMER)
+		def role = Role.findByAuthority(ApplicationConstants.ROLE_USER)
 		createAccountRole(role)
 	
 		if(includeAdminRole){

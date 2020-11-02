@@ -10,8 +10,8 @@
 
     <title>Dynamics +Gain</title>
 
-    <link rel="stylesheet" href="${resource(dir:'css/lib/', file:'bootstrap-grid.css')}" />
-    <link rel="stylesheet" href="${resource(dir:'css/', file:'application.css')}" />
+    <link rel="stylesheet" href="${resource(dir:'css', file:'bootstrap-grid.css')}" />
+    <link rel="stylesheet" href="${resource(dir:'css', file:'application.css')}" />
 
     <g:layoutHead/>
 

@@ -16,7 +16,7 @@ class DashboardController {
 		[accountInstance : accountInstance]
 	}
 
-	@Secured([ApplicationConstants.ROLE_ADMIN, ApplicationConstants.ROLE_CUSTOMER])
+	@Secured([ApplicationConstants.ROLE_ADMIN, ApplicationConstants.ROLE_USER])
 	def index(){
 	}
 

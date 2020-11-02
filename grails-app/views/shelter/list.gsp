@@ -12,6 +12,9 @@
 .shelter-data{
     margin:10px auto 20px auto;
 }
+table{
+    width:100%;
+}
 table th{
     color:#90A4AE;
     padding-bottom: 20px;
@@ -26,8 +29,8 @@ a{
     text-decoration: none !important;
     border-bottom:dotted 2px #428bca !important;
 }
-a.count{
-    font-size:37px;
+.daily-count{
+    font-size:31px;
     font-family: roboto-black !important;
 }
 </style>
@@ -62,12 +65,14 @@ a.count{
 
                     <td><g:link action="edit" elementId="edit-${shelter.id}">${shelter.name}</g:link></td>
 
-                    <td>
-                        <g:if test="${!shelter.count}">
-                            <g:link uri="/dailyCount/entry">${shelter.count}</g:link>
+                    <td style="text-align: center">
+                        <g:if test="${shelter.dailyCount.count == 0}">
+                            <g:link uri="/dailyCount/entry/${shelter.id}" class="daily-count">${shelter?.dailyCount?.count}</g:link>
+                            <br/>
+                            <g:link uri="/dailyCount/entry/${shelter.id}">Enter Today</g:link>
                         </g:if>
                         <g:else>
-                            <g:link uri="/dailyCount/edit/${shelter.dailyCount.id}">${shelter.count}</g:link>
+                            <g:link uri="/dailyCount/edit/${shelter.dailyCount.id}" class="daily-count">${shelter.dailyCount.count}</g:link> &check;
                         </g:else>
                     </td>
                 </tr>

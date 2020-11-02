@@ -15,7 +15,7 @@ class ShelterController {
         def shelter = new Shelter()
         shelter.name = params.name
         shelter.location = params.location
-        shelter.save()
+        shelter.save(flush:true)
         redirect(action: "list")
     }
 
@@ -25,10 +25,16 @@ class ShelterController {
         def shelters = Shelter.list()
         def total = Shelter.count()
 
+        println(date)
+
         shelters.each{shelter ->
-            def count = DailyCount.findByShelterAndDateEntered(shelter, date)
-            if(count){
-                shelter.count = count
+            def dailyCount = DailyCount.findByShelterAndDateEntered(shelter, date)
+            println(dailyCount)
+            if(dailyCount){
+                shelter.dailyCount = dailyCount
+            }else{
+                shelter.dailyCount = new DailyCount()
+                shelter.dailyCount.count = 0
             }
         }
 

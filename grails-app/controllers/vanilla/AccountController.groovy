@@ -349,14 +349,14 @@ class AccountController {
 
 
 
-	@Secured([ApplicationConstants.ROLE_ADMIN, ApplicationConstants.ROLE_CUSTOMER])
+	@Secured([ApplicationConstants.ROLE_ADMIN, ApplicationConstants.ROLE_USER])
 	def account(){
 		def accountInstance = commonUtilities.getAuthenticatedAccount()
 		[accountInstance : accountInstance]
 	}	
 
 
-	@Secured([ApplicationConstants.ROLE_ADMIN, ApplicationConstants.ROLE_CUSTOMER])
+	@Secured([ApplicationConstants.ROLE_ADMIN, ApplicationConstants.ROLE_USER])
 	def update_account(){
 		def accountInstance = commonUtilities.getAuthenticatedAccount()
 

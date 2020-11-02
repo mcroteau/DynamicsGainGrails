@@ -5,10 +5,10 @@
     <title>Edit Count</title>
 </head>
 <body>
-<p style="text-align: center;">${shelter.name}</p>
+<p style="text-align: center;">${dailyCount.shelter.name}</p>
 <h1 style="text-align: center">Today's Count</h1>
 
-<g:form action="update" id="count-form" method="post">
+<g:form action="update" id="count-form" method="post" id="${dailyCount.id}">
 
     <input type="hidden" name="id" value="${dailyCount.id}">
 

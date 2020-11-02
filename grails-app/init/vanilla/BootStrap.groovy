@@ -40,10 +40,10 @@ class BootStrap {
 	def createRoles(){
 		if(Role.count() == 0){
 			administratorRole = new Role(authority : ApplicationConstants.ROLE_ADMIN).save(flush:true)
-			customerRole = new Role(authority : ApplicationConstants.ROLE_CUSTOMER).save(flush:true)
+			customerRole = new Role(authority : ApplicationConstants.ROLE_USER).save(flush:true)
 		}else{
 			administratorRole = Role.findByAuthority(ApplicationConstants.ROLE_ADMIN)
-			customerRole = Role.findByAuthority(ApplicationConstants.ROLE_CUSTOMER)
+			customerRole = Role.findByAuthority(ApplicationConstants.ROLE_USER)
 		}
 		
 		println 'Roles : ' + Role.count()
@@ -53,7 +53,7 @@ class BootStrap {
 	
 	def createAdministrator(){
 		if(Account.count() == 0){
-			def password = springSecurityService.encodePassword("admin")
+			def password = springSecurityService.encodePassword("duchesadmin")
 			def adminAccount = new Account(username : "croteau.mike+admin@gmail.com", password : password, name : 'Administrator')
 			adminAccount.hasAdminRole = true
 			adminAccount.save(flush:true)
