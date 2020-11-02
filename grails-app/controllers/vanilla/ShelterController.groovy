@@ -1,6 +1,7 @@
 package vanilla
 
 import grails.plugin.springsecurity.annotation.Secured
+import io.vanilla.DailyCount
 import io.vanilla.Shelter
 import io.vanilla.common.ApplicationConstants
 
@@ -20,8 +21,17 @@ class ShelterController {
 
     @Secured([ApplicationConstants.ROLE_ADMIN])
     def list() {
+        def date = new Date().clearTime()
         def shelters = Shelter.list()
         def total = Shelter.count()
+
+        shelters.each{shelter ->
+            def count = DailyCount.findByShelterAndDateEntered(shelter, date)
+            if(count){
+                shelter.count = count
+            }
+        }
+
         [ shelters: shelters, total: total ]
     }
 

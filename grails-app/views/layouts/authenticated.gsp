@@ -39,12 +39,12 @@
 
                 <sec:ifAllGranted roles='ROLE_ADMIN'>
                     <g:link uri="/accounts">Accounts</g:link>
-                    <g:link uri="/shelters">Shelters</g:link>
+                    <g:link uri="/shelter/list">Shelters</g:link>
                     <g:link uri="/shelter/add">New Shelter</g:link>
                 </sec:ifAllGranted>
 
-                <g:link uri="/shelters">Today</g:link>
-                <g:link uri="/signout">Logout</g:link>
+                <g:link uri="/shelter/list">Today</g:link>
+                <g:link uri="/logout">Logout</g:link>
 
             </div>
 

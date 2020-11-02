@@ -10,8 +10,8 @@ class UrlMappings {
         }
 
         "/"{ 
-            controller = "account"
-            action = "index"
+            controller = "shelter"
+            action = "list"
         }
 		
         "500"(view:"/error")

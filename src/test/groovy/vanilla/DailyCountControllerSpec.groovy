@@ -3,7 +3,7 @@ package vanilla
 import grails.testing.web.controllers.ControllerUnitTest
 import spock.lang.Specification
 
-class CountControllerSpec extends Specification implements ControllerUnitTest<CountController> {
+class DailyCountControllerSpec extends Specification implements ControllerUnitTest<DailyCountController> {
 
     def setup() {
     }

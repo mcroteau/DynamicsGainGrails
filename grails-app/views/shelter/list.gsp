@@ -5,8 +5,32 @@
     <title>Shelters</title>
 </head>
 <body>
+<style>
+.update-entry-btn{
+    display:block;
+}
+.shelter-data{
+    margin:10px auto 20px auto;
+}
+table th{
+    color:#90A4AE;
+    padding-bottom: 20px;
+}
 
-<div id="list-account" class="content scaffold-list" role="main">
+table td{
+    line-height:1.6em;
+    font-size:21px !important;
+    padding:5px 0px 10px 0px;
+}
+a{
+    text-decoration: none !important;
+    border-bottom:dotted 2px #428bca !important;
+}
+a.count{
+    font-size:37px;
+    font-family: roboto-black !important;
+}
+</style>
 
     <h1>Today's Counts</h1>
 
@@ -19,12 +43,11 @@
         <table class="table">
             <thead>
             <tr>
-                <!-- TODO: make sortable, may require refactoring Account hasMany to include hasMany roles/authorities -->
-                <g:sortableColumn property="id" title="Id" params="${[admin:admin]}"/>
+                <g:sortableColumn property="id" title="Id" />
 
-                <g:sortableColumn property="name" title="Name" params="${[admin:admin]}"/>
+                <g:sortableColumn property="name" title="Name"/>
 
-                <g:sortableColumn property="email" title="Username" params="${[admin:admin]}"/>
+                <th>Count</th>
 
                 <th></th>
             </tr>
@@ -37,14 +60,16 @@
                         <g:link action="edit" id="${shelter.id}">${shelter.id}</g:link>
                     </td>
 
-                    <td>${shelter.name}</td>
-
-                    <td>${shelter.location}</td>
+                    <td><g:link action="edit" elementId="edit-${shelter.id}">${shelter.name}</g:link></td>
 
                     <td>
-                        <g:link action="edit" params="[id: shelter.id]" class="edit-${shelter.id}" elementId="edit-${shelter.id}">Edit</g:link>
+                        <g:if test="${!shelter.count}">
+                            <g:link uri="/dailyCount/entry">${shelter.count}</g:link>
+                        </g:if>
+                        <g:else>
+                            <g:link uri="/dailyCount/edit/${shelter.dailyCount.id}">${shelter.count}</g:link>
+                        </g:else>
                     </td>
-
                 </tr>
             </g:each>
             </tbody>
@@ -58,6 +83,6 @@
         <br/>
         <p>No Shelters added to your account yet.</p>
     </g:else>
-</div>
+
 </body>
 </html>

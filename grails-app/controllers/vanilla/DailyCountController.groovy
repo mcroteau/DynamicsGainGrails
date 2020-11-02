@@ -1,6 +1,6 @@
 package vanilla
 
-class CountController {
+class DailyCountController {
 
     def entry() {
 
