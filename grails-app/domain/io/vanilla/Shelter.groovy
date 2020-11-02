@@ -11,6 +11,8 @@ class Shelter {
     DailyCount dailyCount
     List<DailyCount> counts
 
+    static hasMany = [ accounts: Account ]
+
     static constraints = {
         name(nullable:false)
         location(nullable:false)

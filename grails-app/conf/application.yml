@@ -1,5 +1,5 @@
 server:
-    contextPath: /vanilla
+    contextPath: /z
     port: 9264 
     session:
         timeout : 7200
