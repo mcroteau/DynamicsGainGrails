@@ -1,0 +1,361 @@
+@font-face {
+	font-family: roboto;
+	src: url("/z/css/fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+	font-family: roboto-medium;
+	src: url("/z/css/fonts/Roboto/Roboto-Medium.ttf");
+}
+@font-face {
+	font-family: roboto-thin;
+	src: url('/z/css/fonts/Roboto/Roboto-Thin.ttf');
+}
+@font-face {
+	font-family: roboto-light;
+	src: url('/z/css/fonts/Roboto/Roboto-Light.ttf');
+}
+@font-face {
+	font-family: roboto-bold;
+	src: url('/z/css/fonts/Roboto/Roboto-Bold.ttf');
+}
+@font-face {
+	font-family: roboto-black;
+	src: url('/z/css/fonts/Roboto/Roboto-Black.ttf');
+}
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: roboto !important;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+html,body,
+div, span, p, blockquote,
+h1, h2, h3, h4,
+input, select, textarea,
+input::placeholder,
+textarea::placeholder, th, td{
+	font-family: roboto !important;
+	color:#000;
+}
+
+strong{
+	font-family:roboto-bold !important;
+}
+/*csslint box-model:false*/
+/*
+Box-model set to false because we're setting a height on select elements, which
+also have border and padding. This is done because some browsers don't render
+the padding. We explicitly set the box-model for select elements to border-box,
+so we can ignore the csslint warning.
+*/
+
+
+.notify{
+	margin-bottom:23px;
+	padding:10px 20px;
+	color:#617078 !important;
+	border:solid 1px #617078;
+	background:#fff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+h1{
+	font-family: roboto-bold !important;
+	font-size:52px;
+	margin:10px auto 20px auto;
+}
+
+h2{
+	font-family: roboto-bold !important;
+	font-size:32px;
+	margin:10px auto 20px auto;
+}
+
+p{
+	font-size:21px;
+}
+
+.button,
+input[type="button"].button,
+input[type="reset"].button,
+input[type="submit"].button{
+	cursor:pointer;
+	text-transform:uppercase;
+	color:#fff;
+	font-size:15px;
+	padding:13px 23px;
+	border:solid 1px #418dc5;
+	display:inline-block;
+	background:#43a7fb;
+	text-decoration:none;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	font-family:Roboto !important;
+	border-bottom:none !important;
+	-webkit-box-shadow: 0px 1px 7px 0px rgba(179,179,179,0.73);
+	-moz-box-shadow: 0px 1px 7px 0px rgba(179,179,179,0.73);
+	box-shadow: 0px 1px 7px 0px rgba(179,179,179,0.73);
+	outline:none !important;
+	-webkit-appearance: none;
+	-moz-appearance:none;
+}
+
+.button:hover{
+	-webkit-box-shadow: 0px 3px 9px 0px rgba(179,179,179,0.93) !important;
+	-moz-box-shadow: 0px 3px 9px 0px rgba(179,179,179,0.93) !important;
+	box-shadow: 0px 3px 9px 0px rgba(179,179,179,0.93) !important;
+}
+
+.light-shadow:hover{
+	-webkit-box-shadow: 0px 1px 7px 0px rgba(179,179,179,0.13) !important;
+	-moz-box-shadow: 0px 1px 7px 0px rgba(179,179,179,0.13) !important;
+	box-shadow: 0px 1px 7px 0px rgba(179,179,179,0.13) !important;
+}
+
+
+.button:active{
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(179,179,179,0.73);
+	-moz-box-shadow: 0px 1px 4px 0px rgba(179,179,179,0.73);
+	box-shadow: 0px 1px 4px 0px rgba(179,179,179,0.73);
+}
+
+
+.button.small,
+input[type="button"].button.small,
+input[type="reset"].button.small,
+input[type="submit"].button.small{
+	font-size:11px;
+	padding:15px 23px;
+}
+
+
+.button.yella{
+	color:#2b2b34;
+	background:#FDFE00;
+	background:#FDFE01;
+	border:solid 1px #FDFE01;
+	-webkit-box-shadow: 0px 1px 3px 0px rgba(179,179,179,0.43);
+	-moz-box-shadow: 0px 1px 3px 0px rgba(179,179,179,0.43);
+	box-shadow: 0px 1px 3px 0px rgba(179,179,179,0.43);
+}
+
+.yella{
+	color:#2b2b34;
+	background:#fdfe00;
+	border:solid 1px #fdfe00;
+	-webkit-box-shadow: 0px 1px 3px 0px rgba(179,179,179,0.43);
+	-moz-box-shadow: 0px 1px 3px 0px rgba(179,179,179,0.43);
+	box-shadow: 0px 1px 3px 0px rgba(179,179,179,0.43);
+}
+
+input[type="button"].yella,
+input[type="reset"].yella,
+input[type="submit"].yella,
+input[type="button"].yella{
+	color:#2b2b34;
+	background:#fff553;
+	border:solid 1px #fff553;
+	-webkit-box-shadow: 0px 1px 3px 0px rgba(179,179,179,0.43);
+	-moz-box-shadow: 0px 1px 3px 0px rgba(179,179,179,0.43);
+	box-shadow: 0px 1px 3px 0px rgba(179,179,179,0.43);
+}
+
+
+
+.button.light,
+input[type="button"].button.light,
+input[type="reset"].button.light,
+input[type="submit"].button.light,
+input[type="button"].button.light{
+	background:#fff;
+	color:#000;
+	background:#fff;
+	-webkit-box-shadow: 0px 1px 3px 0px rgba(179,179,179,0.43);
+	-moz-box-shadow: 0px 1px 3px 0px rgba(179,179,179,0.43);
+	box-shadow: 0px 1px 3px 0px rgba(179,179,179,0.43);
+	border:solid 0px #FFFFFF;
+}
+
+.button.modern,
+input[type="button"].button.modern,
+input[type="reset"].button.modern,
+input[type="submit"].button.modern{
+	color:#fff;
+	background:#000;
+	border:solid 1px #000;
+}
+
+
+input[type="button"].modern,
+input[type="reset"].modern,
+input[type="submit"].modern,
+input[type="button"].modern{
+	color:#fff;
+	background:#2b2b34;
+	border:solid 1px #2b2b34;
+	-webkit-box-shadow: 0px 1px 3px 0px rgba(179,179,179,0.43);
+	-moz-box-shadow: 0px 1px 3px 0px rgba(179,179,179,0.43);
+	box-shadow: 0px 1px 3px 0px rgba(179,179,179,0.43);
+}
+
+
+
+.orange,
+.button.orange,
+input[type="button"].button.orange,
+input[type="reset"].button.orange,
+input[type="submit"].button.orange,
+input[type="button"].button.orange{
+	color:#fff;
+	background:#fd8c00;
+	border:solid 1px #fd8c00;
+}
+
+.form-group{
+	margin:10px auto 10px auto;
+}
+
+.form-group label{
+	display: block;
+	margin-bottom:7px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="text"]:focus,
+input[type="password"]:focus{
+	color:#221;
+	font-family:Roboto-Light !important;
+	font-size:19px;
+	background:#fff;
+	width:100%;
+	line-height:1.0em !important;
+	padding:12px 12px !important;
+	border:solid 1px #ccc !important;
+	border-style:solid !important;
+	-webkit-border-radius: 3px !important;
+	-moz-border-radius: 3px !important;
+	border-radius: 3px !important;
+}
+
+input::placeholder{
+	color:#989898;
+}
+
+textarea {
+	color:#001a26 !important;
+	padding:10px 20px 10px 20px;
+	font-family:Roboto-Light !important;
+	font-size:21px !important;
+	background:#fff;
+	border:solid 1px #ccc !important;
+
+	-webkit-box-shadow: 1px 3px 4px 0px rgba(0,0,0,.19);
+	-moz-box-shadow: 1px 3px 4px 0px rgba(0,0,0,.18);
+	box-shadow: 1px 3px 4px 0px rgba(0,0,0,.17);
+}
+
+
+textarea:focus,
+textarea.typing {
+	background:#fff;
+	outline:none;
+	border:solid 1px #ccc !important;
+
+}
+
+textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	font-family:Roboto-Thin !important;
+	color: #E34B86;
+	color:#00374f;
+	font-size:21px;
+	text-shadow: 0px 0px #fff;
+}
+textarea::-moz-placeholder { /* Firefox 19+ */
+	font-family:Roboto-Light !important;
+	color: #E34B86;
+	color:#00374f;
+	text-shadow: 0px 0px #fff;
+}
+textarea:-ms-input-placeholder { /* IE 10+ */
+	font-family:Roboto-Light !important;
+	color: #E34B86;
+	color:#00374f;
+	text-shadow: 0px 0px #fff;
+}
+textarea:-moz-placeholder { /* Firefox 18- */
+	font-family:Roboto-Light !important;
+	color: #E34B86;
+	color:#00374f;
+	text-shadow: 0px 0px #fff;
+}
+
+a{
+	/**color:#43a7fb !important;**/
+	text-decoration: none !important;
+	border-bottom:dotted 2px #428bca !important;
+}
+
+body{
+	margin-top:10px;
+}
+
+.clear{
+	clear:both !important;
+}
+
+body.make{}
