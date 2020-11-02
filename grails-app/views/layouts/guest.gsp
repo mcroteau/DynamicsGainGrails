@@ -20,6 +20,12 @@
     #logo-plus{
         color:white;
     }
+
+    a{
+        font-size:21px;
+        display:inline-block;
+        margin:10px 0px;
+    }
     </style>
 
 </head>
@@ -41,7 +47,8 @@
 
 
             <g:link uri="/">Home</g:link>
-            <g:link uri="/signin">Signin</g:link>
+            <g:link uri="/login/auth">Signin</g:link>
+            <g:link uri="/shelter/list">Admin</g:link>
 
         </div>
         <div class="col-sm-3"></div>

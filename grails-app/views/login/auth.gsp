@@ -79,12 +79,7 @@ html,
 				  	<label for="password">Password</label>
 				  	<input type="password" name="password" class="form-control" id="password" placeholder="******">
 				</div>
-				
-				<div class="form-group">
-					<input type="checkbox" class="chk" name="remember-me" id="remember_me" />
-					<label for="remember_me">Remember me</label>
-				</div>
-				
+
 				<div class="form-group">
 				  	<label><g:link controller="account" action="forgot">Forgot password?</g:link></label>
 				</div>

@@ -34,7 +34,6 @@ class ShelterController {
                 shelter.dailyCount = dailyCount
             }else{
                 shelter.dailyCount = new DailyCount()
-                shelter.dailyCount.count = 0
             }
         }
 

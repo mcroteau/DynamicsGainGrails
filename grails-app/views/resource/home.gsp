@@ -3,7 +3,6 @@
 <head>
     <meta name="layout" content="guest">
 </head>
-
 <body>
 <div id="uno-content">
 
@@ -11,7 +10,11 @@
     <h1 id="uno-total" style="font-size:120px; font-family:roboto-black !important; margin-top:20px; float:left;background:#fff">${total}</h1>
     <br class="clear"/>
     <br/>
-    <p>People without homes.</p>
+    <p>People without homes last night!</p>
+
+    <br/>
+    <br/>
+    <g:link uri="/resource/select" class="button orange">Donate</g:link>
 
 </div>
 </body>

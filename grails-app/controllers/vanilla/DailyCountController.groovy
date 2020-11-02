@@ -20,7 +20,7 @@ class DailyCountController {
         def shelter = Shelter.get(params.id)
 
         def dailyCount = new DailyCount()
-        dailyCount.count = params.count as Integer
+        dailyCount.total = params.total as Integer
         dailyCount.notes = params.notes
         dailyCount.dateEntered = today
         dailyCount.shelter = shelter
@@ -49,7 +49,7 @@ class DailyCountController {
     @Secured([ApplicationConstants.ROLE_ADMIN, ApplicationConstants.ROLE_USER])
     def update(){
         def dailyCount = DailyCount.get(params.id)
-        dailyCount.count = params.count as Integer
+        dailyCount.total = params.total as Integer
         dailyCount.notes = params.notes
         dailyCount.save(flush:true)
         redirect(controller: "shelter", action: "list")

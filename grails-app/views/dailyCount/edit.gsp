@@ -13,7 +13,7 @@
     <input type="hidden" name="id" value="${dailyCount.id}">
 
     <div class="form-group" style="text-align: center">
-        <input type="text" name="count" id="daily-count" value="${dailyCount.count}" style="width:50%;font-size:27px;text-align: center">
+        <input type="text" name="total" id="daily-count" value="${dailyCount.total}" style="width:50%;font-size:27px;text-align: center">
     </div>
 
     <div class="form-group">

@@ -25,7 +25,7 @@
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
 
-            <div id="navigation">
+            <div id="navigation" style="margin-bottom:20px;">
                 <p style="font-size:14px;margin:0px auto 20px auto;">Welcome back <strong>
                     <%
                         def account = commonUtilities.getAuthenticatedAccount()

@@ -27,15 +27,18 @@ repositories {
 }
 
 dependencies {
-	/** SEAL specific dependencies **/
-	
+
     compile "javax.mail:mail:1.4"
     compile "org.grails.plugins:quartz:2.0.12"
 	compile "org.grails.plugins:spring-security-shiro:3.1.1"
 	compile "com.twilio.sdk:twilio:7.33.0"
-	compile files("lib/postgresql-42.1.1.jar")
-	
-	/** end SEAL specific dependencies **/
+    compile "mysql:mysql-connector-java:8.0.18"
+
+    // JAX-B dependencies for JDK 9+
+    compile "javax.xml.bind:jaxb-api:2.2.11"
+    compile "com.sun.xml.bind:jaxb-core:2.2.11"
+    compile "com.sun.xml.bind:jaxb-impl:2.2.11"
+    compile "javax.activation:activation:1.1.1"
 
     compile "org.grails.plugins:database-migration:3.0.3"
     compile "org.liquibase:liquibase-core:3.5.3"

@@ -2,7 +2,7 @@ package io.vanilla
 
 class DailyCount {
 
-    int count
+    int total
     String notes
 
     Date dateEntered
@@ -10,7 +10,7 @@ class DailyCount {
     Shelter shelter
 
     static constraints = {
-        count(nullable:false)
+        total(nullable:false)
         notes(nullable:true)
         dateEntered(nullable:false)
     }
