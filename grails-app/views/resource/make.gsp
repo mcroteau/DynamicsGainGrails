@@ -13,10 +13,10 @@
 
     <h3 style="margin-top:20px;">Donate</h3>
     <br/>
-    <g:link uri="/make_donation?a=5" class="button modern">$5</g:link>
-    <g:link uri="/make_donation?a=10" class="button orange">$10</g:link>
-    <g:link uri="/make_donation?a=25" class="button light">$25</g:link>
-    <g:link uri="/make_donation" class="button">Other</g:link>
+    <g:link uri="/resource/on?a=5" class="button modern">$5</g:link>
+    <g:link uri="/resource/on?a=10" class="button orange">$10</g:link>
+    <g:link uri="/resource/on?a=25" class="button light">$25</g:link>
+    <g:link uri="/resource/on" class="button">Other</g:link>
 
     <br/>
     <br/>

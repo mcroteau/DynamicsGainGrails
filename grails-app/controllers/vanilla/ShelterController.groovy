@@ -5,6 +5,8 @@ import io.vanilla.DailyCount
 import io.vanilla.Shelter
 import io.vanilla.common.ApplicationConstants
 
+import java.text.SimpleDateFormat
+
 class ShelterController {
 
     @Secured([ApplicationConstants.ROLE_ADMIN])
@@ -19,11 +21,28 @@ class ShelterController {
         redirect(action: "list")
     }
 
+    @Secured([ApplicationConstants.ROLE_ADMIN])
+    def edit(long id){
+        def shelter = Shelter.get(id)
+        [shelter: shelter]
+    }
+
+    @Secured([ApplicationConstants.ROLE_ADMIN])
+    def update(long id){
+        def shelter = Shelter.get(id)
+        shelter.name = params.name
+        shelter.location = params.location
+        shelter.save(flush:true)
+        redirect(action: "list")
+    }
+
     @Secured([ApplicationConstants.ROLE_ADMIN, ApplicationConstants.ROLE_USER])
     def list() {
         def date = new Date().clearTime()
+        def frm = new SimpleDateFormat("dd MMM yyyy")
+        def formattedDate = frm.format(date)
+
         def shelters = Shelter.list()
-        def total = Shelter.count()
 
         println(date)
 
@@ -39,13 +58,15 @@ class ShelterController {
             }
         }
 
-        [ shelters: shelters, total: total ]
+        [ shelters: shelters, date: formattedDate ]
     }
 
-    def accounts(long id) {
+    @Secured([ApplicationConstants.ROLE_ADMIN, ApplicationConstants.ROLE_USER])
+    def counts(long id){
         def shelter = Shelter.get(id)
-        def accounts = Account.list()
-        [ shelter: shelter, acccounts: accounts ]
+        def dailyCounts = DailyCount.findAllByShelter(shelter)
+        def total = DailyCount.countByShelter(shelter)
+        [ dailyCounts: dailyCounts, total: total, shelter: shelter ]
     }
 
     def account(){

@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="${resource(dir:'css', file:'bootstrap-grid.css')}" />
     <link rel="stylesheet" href="${resource(dir:'css', file:'application.css')}" />
 
+    <script src="${resource(dir:'js/lib/jquery', file:'jquery.min.js')}" type="text/javascript"></script>
+
     <g:layoutHead/>
 
 </head>
 <body>
 
-<div class="container">
+<div class="container" style="margin-bottom:100px;">
 
     <div class="row">
 

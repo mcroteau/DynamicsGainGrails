@@ -36,6 +36,7 @@ a{
 </style>
 
     <h1>Today's Counts</h1>
+    <p style="margin-bottom:20px;" class="yella">${date}</p>
 
     <g:if test="${flash.message}">
         <div class="notify" role="status">${flash.message}</div>
@@ -63,7 +64,7 @@ a{
                         <g:link action="edit" id="${shelter.id}">${shelter.id}</g:link>
                     </td>
 
-                    <td><g:link action="edit" elementId="edit-${shelter.id}">${shelter.name}</g:link></td>
+                    <td><g:link action="counts" id="${shelter.id}" elementId="edit-${shelter.id}">${shelter.name}</g:link></td>
 
                     <td style="text-align: center">
                         <g:if test="${!shelter.entered}">
@@ -79,10 +80,6 @@ a{
             </g:each>
             </tbody>
         </table>
-
-        <div class="button-group">
-            <g:paginate total="${total}"/>
-        </div>
     </g:if>
     <g:else>
         <br/>
