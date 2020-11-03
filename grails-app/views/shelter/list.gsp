@@ -66,13 +66,13 @@ a{
                     <td><g:link action="edit" elementId="edit-${shelter.id}">${shelter.name}</g:link></td>
 
                     <td style="text-align: center">
-                        <g:if test="${shelter.dailyCount.count == 0}">
+                        <g:if test="${!shelter.entered}">
                             <g:link uri="/dailyCount/entry/${shelter.id}" class="daily-count">0</g:link>
                             <br/>
                             <g:link uri="/dailyCount/entry/${shelter.id}">Enter Today</g:link>
                         </g:if>
                         <g:else>
-                            <g:link uri="/dailyCount/edit/${shelter.dailyCount.id}" class="daily-count">${shelter.dailyCount.total}</g:link> &check;
+                            <g:link uri="/dailyCount/edit/${shelter?.dailyCount?.id}" class="daily-count">${shelter.dailyCount.total}</g:link> &check;
                         </g:else>
                     </td>
                 </tr>

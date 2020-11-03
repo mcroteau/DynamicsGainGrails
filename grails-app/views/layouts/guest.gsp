@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>    <title>Dynamics +Gain : Near Realtime Homelessness Exposed.</title>
+<head>
+
+    <title>Dynamics +Gain : Near Realtime Homelessness Exposed.</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

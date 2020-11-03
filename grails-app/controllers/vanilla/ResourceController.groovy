@@ -10,9 +10,10 @@ class ResourceController {
     @Secured([ApplicationConstants.PERMIT_ALL])
     def home() {
         def total = 0
+        def date = new Date().clearTime()
         def shelters = Shelter.list()
         shelters.each{ shelter ->
-            def counts = DailyCount.findAllByShelter(shelter)
+            def counts = DailyCount.findAllByShelterAndDateEntered(shelter, date)
             counts.each{ count ->
                 total = count.total + total
             }
@@ -37,9 +38,10 @@ class ResourceController {
     @Secured([ApplicationConstants.PERMIT_ALL])
     def make() {
         def total = 0
+        def date = new Date().clearTime()
         def shelters = Shelter.findAllByLocation(params.location)
         shelters.each{ shelter ->
-            def counts = DailyCount.findAllByShelter(shelter)
+            def counts = DailyCount.findAllByShelterAndDateEntered(shelter, date)
             counts.each{ count ->
                 total = count.total + total
             }

@@ -4,8 +4,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>
-${applicationService.getCompanyName()} : Admin Login</title>
+		<title>Dynamics +Gain : Administrator Signin</title>
 		<link rel="stylesheet" href="${resource(dir:'bootstrap/3.1.1/css', file:'bootstrap.min.css')}" />
 		<link rel="stylesheet" href="${resource(dir:'css', file:'application.css')}" />
 	

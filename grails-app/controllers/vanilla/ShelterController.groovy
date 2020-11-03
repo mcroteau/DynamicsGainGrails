@@ -32,8 +32,10 @@ class ShelterController {
             println(dailyCount)
             if(dailyCount){
                 shelter.dailyCount = dailyCount
+                shelter.entered = true
             }else{
                 shelter.dailyCount = new DailyCount()
+                shelter.entered = false
             }
         }
 
