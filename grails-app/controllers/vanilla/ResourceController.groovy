@@ -55,4 +55,7 @@ class ResourceController {
         def shelters = Shelter.list()
         [shelters: shelters]
     }
+
+    @Secured([ApplicationConstants.PERMIT_ALL])
+    def onn(){}
 }
