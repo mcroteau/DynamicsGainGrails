@@ -1,5 +1,6 @@
-![Hilo Open Commerce](http://openabc.xyz/images/vanilla-icon.png)
+# Dynamics +Gain
 
-# Vanilla
 
-Plain starter application
+Housing & homeless
+www.fairbankshomeless.org
+
